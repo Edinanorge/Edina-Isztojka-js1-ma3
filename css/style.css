@@ -1,0 +1,76 @@
+/* colors:
+      green:2a9d8f
+     orange:f4a261 
+      error:e76f51
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: #333;
+  background-color: #bfe2dd;
+}
+
+h1 {
+  font-family: "Lora", serif;
+  text-align: center;
+  font-size: 4rem;
+  margin-bottom: 5rem;
+}
+
+.container {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.results {
+  max-width: 80rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.result {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+
+  border: 2px solid #f4a261;
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1rem;
+  background-color: #d9eeeb;
+}
+
+.game-name {
+  font-family: "Lora", "Times New Roman", Times, serif;
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.error {
+  border: 2px solid #e76f51;
+  border-radius: 3px;
+  padding: 2rem;
+  color: #792511;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.spinner {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100vw;
+  height: 100vh;
+
+  background-image: url("https://i.stack.imgur.com/MnyxU.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
