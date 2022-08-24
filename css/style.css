@@ -1,7 +1,6 @@
 /* colors:
-      green:2a9d8f
-     orange:f4a261 
-      error:e76f51
+      background:#2a9d8f
+      error:#e76f51
 */
 
 * {
@@ -22,7 +21,7 @@ h1 {
 }
 
 .container {
-  max-width: 80rem;
+  max-width: 85rem;
   margin: 0 auto;
 }
 
