@@ -7,23 +7,27 @@ async function getGames() {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    const results = data.results;
+    const games = data.results;
 
-    resultContainer.innerHTML = "";
-
-    for (let i = 0; i < results.length; i++) {
-      if (i === 8) {
-        break;
-      }
-
-      resultContainer.innerHTML += `<div class="result">
-                                      <div class="game-name">${results[i].name}</div> 
-                                      <div>Rating: ${results[i].rating}</div>
-                                      <div>Tags: ${results[i].tags.length}</div>
-                                    </div>`;
-    }
+    displayGames(games);
   } catch (error) {
     resultContainer.innerHTML = displayError("An error has occured !!!");
   }
 }
 getGames();
+
+function displayGames(games) {
+  resultContainer.innerHTML = "";
+
+  for (let i = 0; i < games.length; i++) {
+    if (i === 8) {
+      break;
+    }
+
+    resultContainer.innerHTML += `<div class="result">
+                                    <div class="game-name">${games[i].name}</div> 
+                                    <div>Rating: ${games[i].rating}</div>
+                                    <div>Tags: ${games[i].tags.length}</div>
+                                  </div>`;
+  }
+}
